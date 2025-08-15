@@ -1,0 +1,3 @@
+- everything should run locally on a not-to-beefy computer
+- everything should be fast enough that conversations in game still flow naturally
+- agents should be able to trigger functions in game to keep their speech correlated with actions

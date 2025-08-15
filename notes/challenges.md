@@ -1,0 +1,4 @@
+- making sure they talk well and have convincing and emotionally deep or interesting discussions with each other when in the presence of the player
+    - we don't want them to just talk about [guzzling their own urine all the time](https://www.youtube.com/watch?v=TpYVyJBmH0g)
+- what's the best way to register a large corpus of past conversations?
+    - TODO: note the approach discussed with adam here
