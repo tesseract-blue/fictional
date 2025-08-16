@@ -1,1 +1,2 @@
 - while totally out of scope, it occurs to me that it could be cool to having a strongly typed scripting language for constructing realities / narratives / meta-structures for agents to occupy
+- it might be good to use the entities from Basic Formal Ontology to structure the graph
