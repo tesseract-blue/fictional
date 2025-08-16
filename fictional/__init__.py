@@ -21,10 +21,27 @@ class Event(Node): ...
 class LocaleType(Node):
     name: str = Field(examples=["tavern"])
     info: str = Field(examples=["A tavern for weary travelers."])
+    social_norms: str
 
 
 class Locale(Node):
+    """
+    Other properties under consideration:
+
+    - size
+    - acoustic isolation / properties
+    - capacity
+    - typical occupants
+    """
+
     name: str = Field(examples=["The Prancing Pony"])
+    social_norms: str | None = None
+    """
+    The social norms for this locale. If these are not defined for this specific locale,
+    then the social norms from the locale type will be used.
+
+    TODO: maybe social norms should be its own node?
+    """
 
     @property
     def type(self) -> LocaleType: ...
