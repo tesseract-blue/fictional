@@ -1,0 +1,1 @@
+- while totally out of scope, it occurs to me that it could be cool to having a strongly typed scripting language for constructing realities / narratives / meta-structures for agents to occupy
