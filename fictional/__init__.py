@@ -19,9 +19,17 @@ class Event(Node): ...
 
 
 class LocaleType(Node):
+    """
+    The locale type node is meant to define generic properties for classes of locales,
+    which can be overridden by specific locales. The idea being that while every tavern
+    is different, most taverns have stuff in common. We don't want all taverns to be copy
+    and pasted versions of the same thing, but we don't want to have to duplicate attributes
+    if it is a game with 100 taverns.
+    """
+
     name: str = Field(examples=["tavern"])
     info: str = Field(examples=["A tavern for weary travelers."])
-    social_norms: str
+    # common_social_norms: str = Field(examples=["Fairly laid back"]) # TODO
 
 
 class Locale(Node):
@@ -35,13 +43,7 @@ class Locale(Node):
     """
 
     name: str = Field(examples=["The Prancing Pony"])
-    social_norms: str | None = None
-    """
-    The social norms for this locale. If these are not defined for this specific locale,
-    then the social norms from the locale type will be used.
-
-    TODO: maybe social norms should be its own node?
-    """
+    # specific_social_norms: str | None = None # TODO: This would probably encompass locale specific norms - like worship of a god in this tavern that isn't worshipped in other taverns.
 
     @property
     def type(self) -> LocaleType: ...
