@@ -16,7 +16,25 @@ class Event(Node): ...
 
 
 class Agent(Node):
-    name: str | None = None
+    """
+    global:
+    - setting/context (eg: fantasy world, sci fi space ship)
+
+    constant:
+    - name
+    - role
+    - personality traits / questions
+
+    dynamic:
+    - current setting/context (tavern, spacecraft docking bay)
+    - entities in environment
+    - available actions in reality (functions)
+    - current objective or goal (eg: sell the player wares)
+    """
+
+    name: str | None = Field(
+        default=None,
+    )
     role: str | None = Field(
         default=None,
         examples=["merchant", "soldier"],
