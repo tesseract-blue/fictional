@@ -2,3 +2,5 @@
     - we don't want them to just talk about [guzzling their own urine all the time](https://www.youtube.com/watch?v=TpYVyJBmH0g)
 - what's the best way to register a large corpus of past conversations?
     - TODO: note the approach discussed with adam here
+- do agents have the power to delegate side quests for the player that the game dev didn't explicitly create?
+    - if they do, how does one make them narratively interesting? grinding side quests with slightly different words isn't that interesting

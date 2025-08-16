@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class Node(BaseModel): ...
@@ -12,4 +12,7 @@ class Place(Node):
 class Event(Node): ...
 
 
-class Agent(Node): ...
+class Agent(Node):
+    name: str | None = None
+    role: str | None = None
+    beliefs: list[str] = Field(default_factory=list)
