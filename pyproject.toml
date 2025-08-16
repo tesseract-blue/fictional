@@ -7,7 +7,13 @@ authors = [
     { name = "Hart Traveller", email = "24962209+harttraveller@users.noreply.github.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "cyclopts>=3.22.5",
+    "llama-cpp-python>=0.3.16",
+    "pydantic>=2.11.7",
+    "rich>=14.1.0",
+    "rustworkx>=0.17.1",
+]
 
 [build-system]
 requires = ["hatchling"]
