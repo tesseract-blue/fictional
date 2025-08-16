@@ -18,8 +18,24 @@ class Place(Node):
 class Event(Node): ...
 
 
+class LocaleType(Node):
+    name: str = Field(examples=["tavern"])
+    info: str = Field(examples=["A tavern for weary travelers."])
+
+
 class Locale(Node):
-    name: ...
+    name: str = Field(examples=["The Prancing Pony"])
+
+    @property
+    def type(self) -> LocaleType: ...
+
+    @property
+    def type_name(self) -> str:
+        return self.type.name
+
+    @property
+    def type_info(self) -> str:
+        return self.type.info
 
     @property
     def sub_locales(self) -> list[Locale]:
@@ -43,6 +59,9 @@ class Locale(Node):
     def adjacent_locales(self) -> list[Locale]:
         """ """
         ...
+
+    @property
+    def occupants(self) -> list[Agent]: ...
 
 
 class Realm(Locale):
